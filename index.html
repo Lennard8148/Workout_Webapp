@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login / Registrierung</h2>
+        <input type="text" id="username" placeholder="Benutzername">
+        <input type="password" id="password" placeholder="Passwort">
+        <button onclick="register()">Registrieren</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="tracker-container" style="display:none;">
+        <button onclick="logout()">Logout</button>
+        <h2>Workouts</h2>
+        <input type="text" id="exercise" placeholder="Übung">
+        <input type="number" id="weight" placeholder="Gewicht">
+        <input type="number" id="reps" placeholder="Wiederholungen">
+        <button onclick="addWorkout()">Hinzufügen</button>
+
+        <table id="workout-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Übung</th>
+                    <th>Gewicht</th>
+                    <th>Wiederholungen</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody id="workouts"></tbody>
+        </table>
+
+        <input type="number" id="delete-id" placeholder="Workout ID löschen">
+        <button onclick="deleteWorkout()">Löschen</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
